@@ -26,7 +26,7 @@ jobs:
       run: cf l -a https://api.us-south.cf.cloud.ibm.com login -u ${{ secrets.IBM_MAIL }} -p ${{ secrets.IBM_PWD }}
       
     - name: Restart Cloud Foundry APP
-      run: cf restart ${{ secrets.IBM_APP_NAME }}
+      run: cf rs ${{ secrets.IBM_APP_NAME }}
 
     - name: Delete workflow runs
       uses: Mattraks/delete-workflow-runs@main
