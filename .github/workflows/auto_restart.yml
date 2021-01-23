@@ -1,4 +1,4 @@
-name: IBM Cloud Auto Restart
+name:  IBM Cloud Auto Restart
 
 on:
 #  push:
@@ -33,4 +33,3 @@ jobs:
       with:
         retain_days: 2
         keep_minimum_runs: 6
-
