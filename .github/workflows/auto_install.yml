@@ -36,7 +36,7 @@ jobs:
         sed -i "s/your_tg_username/${{ secrets.TG_USERNAME }}/g" ${GITHUB_WORKSPACE}/gd-utils/config.js
         sed -i "s/DEFAULT_TARGET = ''/DEFAULT_TARGET = '${{ secrets.DRIVE_ID }}'/g" ${GITHUB_WORKSPACE}/gd-utils/config.js
         sed -i "s/23333/8080/g" ${GITHUB_WORKSPACE}/gd-utils/server.js
-        sed -i "s@https_proxy='http://127.0.0.1:1086' nodemon@pm2-runtime start@g" ${GITHUB_WORKSPACE}/gd-utils/package.json
+        sed -i "s/@https_proxy='http://127.0.0.1:1086' nodemon@pm2-runtime start@g" ${GITHUB_WORKSPACE}/gd-utils/package.json
         sed -i '/scripts/a\    "preinstall": "npm install pm2 -g",' ${GITHUB_WORKSPACE}/gd-utils/package.json
         sed -i '/repository/a\  "engines": {\n    "node": "12.*"\n  },' ${GITHUB_WORKSPACE}/gd-utils/package.json
         sed -i '/dependencies/a\    "pm2": "^3.2.8",' ${GITHUB_WORKSPACE}/gd-utils/package.json
