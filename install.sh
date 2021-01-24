@@ -47,9 +47,9 @@ create_mainfest_file(){
     sed -i "s/cloud_fonudray_name/${IBM_APP_NAME}/g" ${SH_PATH}/IBM-gd-utils/manifest.yml &&
     sed -i "s/cloud_fonudray_mem/${IBM_MEM_SIZE}/g" ${SH_PATH}/IBM-gd-utils/manifest.yml && 
     sed -i "s/bot_token/${BOT_TOKEN}/g" ${SH_PATH}/IBM-gd-utils/gd-utils/config.js &&
-    sed -i "s/client_id: 'your_client_id'/client_id: '${{ secrets.CLIENT_ID }}'/g" ${SH_PATH}/${GITHUB_WORKSPACE}/gd-utils/config.js &&
-    sed -i "s/client_secret: 'your_client_secret'/client_secret: '${{ secrets.CLIENT_SECRET }}'/g" ${SH_PATH}/${GITHUB_WORKSPACE}/gd-utils/config.js &&
-    sed -i "s/refresh_token: 'your_refrest_token'/refresh_token: '${{ secrets.REFRESH_TOKEN }}'/g" ${SH_PATH}/${GITHUB_WORKSPACE}/gd-utils/config.js &&
+    sed -i "s/client_id: 'your_client_id'/client_id: '${{ secrets.CLIENT_ID }}'/g" ${SH_PATH}/IBM-gd-utils/gd-utils/config.js &&
+    sed -i "s/client_secret: 'your_client_secret'/client_secret: '${{ secrets.CLIENT_SECRET }}'/g" ${SH_PATH}/IBM-gd-utils/gd-utils/config.js &&
+    sed -i "s/refresh_token: 'your_refrest_token'/refresh_token: '${{ secrets.REFRESH_TOKEN }}'/g" ${SH_PATH}/IBM-gd-utils/gd-utils/config.js &&
     sed -i "s/your_tg_username/${TG_USERNAME}/g" ${SH_PATH}/IBM-gd-utils/gd-utils/config.js && 
     sed -i "s/DEFAULT_TARGET = ''/DEFAULT_TARGET = '${DRIVE_ID}'/g" ${SH_PATH}/IBM-gd-utils/gd-utils/config.js&&
     sed -i "s/23333/8080/g" ${SH_PATH}/IBM-gd-utils/gd-utils/server.js &&
